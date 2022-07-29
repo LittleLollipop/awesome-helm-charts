@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  cryptocurrencyshare:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-07-29T03:58:06.067964509Z"
+    description: A Helm chart for Kubernetes
+    digest: e86ee424849099368459b21acb70b6b2597b55a354e850279bb0f2fd306fb7cc
+    name: cryptocurrencyshare
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/cryptocurrencyshare-0.1.0/cryptocurrencyshare-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-07-29T03:58:05.822611453Z"
