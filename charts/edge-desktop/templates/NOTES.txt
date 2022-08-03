@@ -1,0 +1,4 @@
+1. Desktop URL
+  https://localhost:{{.Values.appconfig.portExternal }}
+2. username and password
+  your username and password in KubeSphere

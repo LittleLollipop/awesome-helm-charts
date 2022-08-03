@@ -1,0 +1,11 @@
+image:
+  name: 'kldtks/edge:edge-desktop-V0.0.2'
+
+namespace:
+  name: 'kubesphere-system'
+
+appconfig:
+  appname: 'edge-desktop'
+  portPod: 30100
+  portService: 30100
+  portExternal: 30180
