@@ -11,4 +11,26 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/cryptocurrencyshare-0.1.0/cryptocurrencyshare-0.1.0.tgz
     version: 0.1.0
+  edge-desktop:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-08-03T06:40:03.065120021Z"
+    description: Edge desktop
+    digest: b0f9117118dc54a3dc6e0b6e1e33832ea2f3d6ce8574267ae1f5592a2b9f6454
+    name: edge-desktop
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/edge-desktop-0.0.1/edge-desktop-0.0.1.tgz
+    version: 0.0.1
+  simple:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-03T06:40:03.262467254Z"
+    description: A Helm chart for Kubernetes
+    digest: 6c628425c006fcfaa3c487708e54ddb77343b7c7696978c962df58bbdab30bd9
+    name: simple
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
+    version: 0.1.0
 generated: "2022-07-29T03:58:05.822611453Z"
