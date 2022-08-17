@@ -1,5 +1,5 @@
 image:
-  name: 'kldtks/edge:edge-desktop-V0.0.2'
+  name: 'kldtks/edge:edge-desktop-V0.0.3'
 
 namespace:
   name: 'kubesphere-system'
