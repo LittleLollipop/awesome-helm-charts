@@ -1,0 +1,8 @@
+Deploy the open source project file browser in the edge environment
+
+Please execute the following command
+
+sudo mkdir /data/database
+sudo mkdir /data/config
+sudo mkdir /data/srv
+sudo chmod -R 777 /data

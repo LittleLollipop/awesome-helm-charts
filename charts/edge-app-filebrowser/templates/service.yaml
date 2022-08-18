@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: filebrowser-service
+spec:
+  selector:
+    app: filebrowser
+  type: NodePort
+  ports:
+    - protocol: TCP
+      name: fb
+      port: 80
+      targetPort: 80
+      nodePort: 30183
+    - protocol: TCP
+      name: registrar
+      port: 30182
+      targetPort: 30182
+      nodePort: 30182

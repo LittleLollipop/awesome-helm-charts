@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: filebrowser-deployment
+  labels:
+    app: filebrowser
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: filebrowser
+  template:
+    metadata:
+      labels:
+        app: filebrowser
+    spec:
+      containers:
+      - name: filebrowser
+        image: {{ .Values.image.name }}
+        ports:
+        - containerPort: 80
+        - containerPort: 30182
+        env:
+        # - name: FB_ADDRESS
+        #   value: ""
+        # - name: FB_BASEURL
+        #   value: ""
+        - name: FB_DATABASE
+          value: "/database/database.db"
+        - name: FB_CONFIG
+          value: "/config/.filebrowser.json"
+        - name: FB_ROOT
+          value: "/srv"
+        - name: FB_PORT
+          value: "80"
+        - name: username
+          value: "username"
+        - name: password
+          value: "password"
+        volumeMounts:
+        - name: filebrowser-volume-data
+          mountPath: /srv/
+        - name: filebrowser-volume-db
+          mountPath: /database/
+        - name: filebrowser-volume-config
+          mountPath: /config/
+      volumes:
+      - name: filebrowser-volume-data
+        hostPath:
+          path: /data/srv/
+          type: Directory
+      - name: filebrowser-volume-db
+        hostPath:
+          path: /data/database/
+          type: Directory
+      - name: filebrowser-volume-config
+        hostPath:
+          path: /data/config/
+          type: Directory
