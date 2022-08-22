@@ -13,6 +13,16 @@ entries:
     version: 0.1.0
   edge-app-filebrowser:
   - apiVersion: v2
+    appVersion: 0.0.2
+    created: "2022-08-22T09:26:40.336801475Z"
+    description: Deploy the open source project file browser in the edge environment
+    digest: 570bba09a477bca424e0b6484b958e60166f4a810573494ba75368b505609b6a
+    name: edge-app-filebrowser
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/edge-app-filebrowser-0.0.2/edge-app-filebrowser-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
     appVersion: 0.0.1
     created: "2022-08-18T06:30:19.94471594Z"
     description: Deploy the open source project file browser in the edge environment
@@ -23,6 +33,16 @@ entries:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/edge-app-filebrowser-0.0.1/edge-app-filebrowser-0.0.1.tgz
     version: 0.0.1
   edge-desktop:
+  - apiVersion: v2
+    appVersion: 0.0.9
+    created: "2022-08-22T09:26:40.607060641Z"
+    description: Edge desktop
+    digest: f21cb213d2193f130448bd15babba5758e09a0f065de7c1e50f65d9fb4ba2c14
+    name: edge-desktop
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/edge-desktop-0.0.9/edge-desktop-0.0.9.tgz
+    version: 0.0.9
   - apiVersion: v2
     appVersion: 0.0.8
     created: "2022-08-22T08:41:19.10865481Z"
