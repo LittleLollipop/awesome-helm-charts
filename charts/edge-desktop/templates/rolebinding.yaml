@@ -4,6 +4,7 @@ metadata:
   name: edge-desktop-rb
 subjects:
   - kind: ServiceAccount
+    namespace: kubesphere-system
     name: internal-kubectl
 roleRef:
   # kind: Role
