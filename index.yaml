@@ -24,6 +24,16 @@ entries:
     version: 0.0.1
   edge-desktop:
   - apiVersion: v2
+    appVersion: 0.0.4
+    created: "2022-08-22T05:52:50.468453162Z"
+    description: Edge desktop
+    digest: e0d588feb938315fa74ab2087d12670f3b4e805ef2fd3d11221678172af47eb7
+    name: edge-desktop
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/edge-desktop-0.0.4/edge-desktop-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
     appVersion: 0.0.3
     created: "2022-08-18T06:30:20.256404897Z"
     description: Edge desktop
