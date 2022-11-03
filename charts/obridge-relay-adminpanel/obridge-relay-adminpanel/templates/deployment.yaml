@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: relay-adminpanel
+  labels:
+    app: relay-adminpanel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: relay-adminpanel
+  template:
+    metadata:
+      labels:
+        app: relay-adminpanel
+    spec:
+      containers:
+      - name: relay-adminpanel
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 9101
+        env:
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: obridge-relay-db-postgresql
+                key: postgres-password
