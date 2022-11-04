@@ -26,9 +26,9 @@ spec:
                 name: obridge-relay-db-redis
                 key: redis-password
           - name: EVM_CLIENT_PORT
-            value: 9100
+            value: "9100"
           - name: REDIS_HOST
-            value: obridge-relay-db-redis-master
+            value: "obridge-relay-db-redis-master"
           - name: RPC_URL
             value: {{ .Values.evm.rpc.url }}
           - name: CONTRACT_ADDRESS
