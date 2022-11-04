@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-obridge-relay-admin-panel
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/relay-admin-panel/`)"
+      kind: Rule
+      services:
+        - name: relay-adminpanel-service
+          port: 9101
