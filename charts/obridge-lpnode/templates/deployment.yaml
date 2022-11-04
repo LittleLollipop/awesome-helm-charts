@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lpnode
+  labels:
+    app: lpnode
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lpnode
+  template:
+    metadata:
+      labels:
+        app: lpnode
+    spec:
+      containers:
+      - name: lpnode
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 9202
+        env:
+          - name: REDIS_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: obridge-lpnode-db-redis
+                key: redis-password
+          - name: LPNODE_URI
+            value: "{{ .Values.lpconfig.lpnode_uri }}"
+          - name: RELAY_URI
+            value: "{{ .Values.lpconfig.relay_uri }}"
