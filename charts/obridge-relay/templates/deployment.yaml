@@ -20,7 +20,7 @@ spec:
         ports:
           - containerPort: 9102
         env:
-          - name: POSTGRES_PASSWORD
+          - name: POSTGRESQL_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: obridge-relay-db-postgresql
