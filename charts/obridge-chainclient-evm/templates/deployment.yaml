@@ -30,13 +30,13 @@ spec:
           - name: REDIS_HOST
             value: "obridge-relay-db-redis-master"
           - name: RPC_URL
-            value: {{ .Values.evm.rpc.url }}
+            value: "{{ .Values.evm.rpc.url }}"
           - name: CONTRACT_ADDRESS
-            value: {{ .Values.evm.contract }}
+            value: "{{ .Values.evm.contract }}"
           - name: SYSTEM_CHAIN_ID
-            value: {{ .Values.evm.system_chain_id }}
+            value: "{{ .Values.evm.system_chain_id }}"
           - name: CHAIN_ID
-            value: {{ .Values.evm.chain_id }}
+            value: "{{ .Values.evm.chain_id }}"
           - name: START_BLOCK
-            value: {{ .Values.evm.start_block }}
+            value: "{{ .Values.evm.start_block }}"
 

@@ -8,4 +8,4 @@ evm:
   chain_id: '97'
   start_block: '24231042'
 image:
-  name: kldtks/edge:obridge-chain-client-evm-14c9bbcf
+  name: kldtks/edge:obridge-chain-client-evm-749f655f
