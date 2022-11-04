@@ -143,6 +143,17 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/edge-desktop-0.0.1/edge-desktop-0.0.1.tgz
     version: 0.0.1
+  obridge-chain-client-evm:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-11-04T06:57:33.923601298Z"
+    description: Obridge Chain Client EVM
+    digest: e8237114be9a30bc17e9dd6039c4fb0e631834d378058b2ad88d98b3f97fe505
+    name: obridge-chain-client-evm
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-chain-client-evm-0.0.1/obridge-chain-client-evm-0.0.1.tgz
+    version: 0.0.1
   obridge-relay:
   - apiVersion: v2
     appVersion: 0.0.1
@@ -196,4 +207,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-04T04:48:39.233772995Z"
+generated: "2022-11-04T06:57:33.923651798Z"
