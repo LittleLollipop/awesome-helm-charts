@@ -145,6 +145,16 @@ entries:
     version: 0.0.1
   obridge-chain-client-evm:
   - apiVersion: v2
+    appVersion: 0.0.5
+    created: "2022-11-04T10:10:16.895349234Z"
+    description: Obridge Chain Client EVM
+    digest: 8fa5e17d108a5e4fc3b38cf9852b11e23c42a49266168fa2ff60f81abe4bdc4e
+    name: obridge-chain-client-evm
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-chain-client-evm-0.0.5/obridge-chain-client-evm-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
     appVersion: 0.0.4
     created: "2022-11-04T10:06:01.403864854Z"
     description: Obridge Chain Client EVM
@@ -237,4 +247,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-04T10:06:01.403926158Z"
+generated: "2022-11-04T10:10:16.895631738Z"
