@@ -143,6 +143,17 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/edge-desktop-0.0.1/edge-desktop-0.0.1.tgz
     version: 0.0.1
+  obridge-relay:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-11-04T04:48:39.233481296Z"
+    description: Obridge Relay
+    digest: 0b6db580e9c14827abc02f65566cbb769a498db62143c7e92a19b69904136e46
+    name: obridge-relay
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-relay-0.0.1/obridge-relay-0.0.1.tgz
+    version: 0.0.1
   obridge-relay-adminpanel:
   - apiVersion: v2
     appVersion: 0.0.2
@@ -185,4 +196,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-04T03:38:49.18402276Z"
+generated: "2022-11-04T04:48:39.233772995Z"
