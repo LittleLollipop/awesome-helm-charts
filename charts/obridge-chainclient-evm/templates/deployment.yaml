@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chain-client-evm
+  labels:
+    app: chain-client-evm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chain-client-evm
+  template:
+    metadata:
+      labels:
+        app: chain-client-evm
+    spec:
+      containers:
+      - name: chain-client-evm
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 9100
+        env:
+          - name: REDIS_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: obridge-relay-db-redis
+                key: redis-password
+          - name: EVM_CLIENT_PORT
+            value: 9100
+          - name: REDIS_HOST
+            value: obridge-relay-db-redis-master
+          - name: RPC_URL
+            value: {{ .Values.evm.rpc.url }}
+          - name: CONTRACT_ADDRESS
+            value: {{ .Values.evm.contract }}
+          - name: SYSTEM_CHAIN_ID
+            value: {{ .Values.evm.system_chain_id }}
+          - name: CHAIN_ID
+            value: {{ .Values.evm.chain_id }}
+          - name: START_BLOCK
+            value: {{ .Values.evm.start_block }}
+

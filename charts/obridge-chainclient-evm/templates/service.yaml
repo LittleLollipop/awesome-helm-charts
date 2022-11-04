@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: chain-client-evm-server
+spec:
+  selector:
+    app: chain-client-evm
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      name: chain-client-evm-api
+      port: 9100
+      targetPort: 9100
