@@ -22,4 +22,4 @@ jobs:
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.1.0
         env:
-          CR_TOKEN: "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"
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
