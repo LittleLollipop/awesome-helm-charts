@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: chain-client-evm
+  name: chain-client-evm-{{ .Values.evm.system_chain_id }}
   labels:
-    app: chain-client-evm
+    app: chain-client-evm-{{ .Values.evm.system_chain_id }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: chain-client-evm
+      app: chain-client-evm-{{ .Values.evm.system_chain_id }}
   template:
     metadata:
       labels:
-        app: chain-client-evm
+        app: chain-client-evm-{{ .Values.evm.system_chain_id }}
     spec:
       containers:
-      - name: chain-client-evm
+      - name: chain-client-evm-{{ .Values.evm.system_chain_id }}
         image: {{ .Values.image.name }}
         ports:
           - containerPort: 9100

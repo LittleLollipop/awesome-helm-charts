@@ -4,7 +4,7 @@ metadata:
   name: chain-client-evm-server-{{ .Values.evm.system_chain_id }}
 spec:
   selector:
-    app: chain-client-evm
+    app: chain-client-evm-{{ .Values.evm.system_chain_id }}
   type: ClusterIP
   ports:
     - protocol: TCP
