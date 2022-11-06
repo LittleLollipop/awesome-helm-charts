@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ $fullName }}
+  name: {{ include "obridge-lpnode.fullname" . }}
   labels:
-    app: {{ $fullName }}
+    app: {{ include "obridge-lpnode.fullname" . }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ $fullName }}
+      app: {{ include "obridge-lpnode.fullname" . }}
   template:
     metadata:
       labels:
-        app: {{ $fullName }}
+        app: {{ include "obridge-lpnode.fullname" . }}
     spec:
       containers:
-      - name: {{ $fullName }}
+      - name: {{ include "obridge-lpnode.fullname" . }}
         image: {{ .Values.image.name }}
         ports:
           - containerPort: 9202
