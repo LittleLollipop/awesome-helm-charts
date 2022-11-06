@@ -7,7 +7,10 @@ evm:
   system_chain_id: '9006'
   chain_id: '97'
   start_block: '24231042'
+redis:
+  password_key: obridge-relay-db-redis
+  host: obridge-relay-db-redis-master
 nameOverride: ''
 fullnameOverride: ''
 image:
-  name: kldtks/edge:obridge-chain-client-evm-6847c12d
+  name: kldtks/edge:obridge-chain-client-evm-1c0e2234

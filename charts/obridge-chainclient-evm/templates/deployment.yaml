@@ -23,12 +23,12 @@ spec:
           - name: REDIS_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: obridge-relay-db-redis
+                name: {{ .Values.redis.password_key }}
                 key: redis-password
           - name: EVM_CLIENT_PORT
             value: "9100"
           - name: REDIS_HOST
-            value: "obridge-relay-db-redis-master"
+            value: "{{ .Values.redis.host }}"
           - name: RPC_URL
             value: "{{ .Values.evm.rpc.url }}"
           - name: CONTRACT_ADDRESS
