@@ -7,8 +7,8 @@ spec:
     - web
     - websecure
   routes:
-    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/evm-client/`)"
+    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/evm-client-{{ .Values.evm.system_chain_id }}/`)"
       kind: Rule
       services:
-        - name: chain-client-evm-server
+        - name: chain-client-evm-server-{{ .Values.evm.system_chain_id }}
           port: 9100
