@@ -3,5 +3,7 @@ domain:
 lpconfig:
   lpnode_uri: https://obridge-api-lpnode.edge-dev.xyz/lpnode
   relay_uri: https://obridge-api-relay.edge-dev.xyz/relay
+nameOverride: ''
+fullnameOverride: ''
 image:
-  name: kldtks/edge:obridge-lpnode-2f2aa43c
+  name: kldtks/edge:obridge-lpnode-d1af6312
