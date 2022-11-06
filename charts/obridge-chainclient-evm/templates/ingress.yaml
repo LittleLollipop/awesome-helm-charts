@@ -1,7 +1,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: ingress-obridge-chain-client-evm-{{ .Values.evm.system_chain_id }}
+  name: ingress-{{ include "obridge-chain-client-evm.fullname" . }}-{{ .Values.evm.system_chain_id }}
 spec:
   entryPoints:
     - web
@@ -10,5 +10,5 @@ spec:
     - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/evm-client-{{ .Values.evm.system_chain_id }}/`)"
       kind: Rule
       services:
-        - name: chain-client-evm-server-{{ .Values.evm.system_chain_id }}
+        - name: {{ include "obridge-chain-client-evm.fullname" . }}-server-{{ .Values.evm.system_chain_id }}
           port: 9100

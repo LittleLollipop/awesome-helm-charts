@@ -7,5 +7,7 @@ evm:
   system_chain_id: '9006'
   chain_id: '97'
   start_block: '24231042'
+nameOverride: ''
+fullnameOverride: ''
 image:
-  name: kldtks/edge:obridge-chain-client-evm-5a7bd429
+  name: kldtks/edge:obridge-chain-client-evm-6847c12d
