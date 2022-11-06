@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lpnode
+  name: {{ $fullName }}
   labels:
-    app: lpnode
+    app: {{ $fullName }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: lpnode
+      app: {{ $fullName }}
   template:
     metadata:
       labels:
-        app: lpnode
+        app: {{ $fullName }}
     spec:
       containers:
-      - name: lpnode
+      - name: {{ $fullName }}
         image: {{ .Values.image.name }}
         ports:
           - containerPort: 9202

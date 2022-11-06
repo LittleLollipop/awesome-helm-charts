@@ -1,7 +1,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: ingress-obridge-lpnode
+  name: ingress-{{ $fullName }}
 spec:
   entryPoints:
     - web
@@ -10,5 +10,5 @@ spec:
     - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/lpnode/`)"
       kind: Rule
       services:
-        - name: lpnode-server
+        - name: {{ $fullName }}-server
           port: 9202

@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: lpnode-server
+  name: {{ $fullName }}-server
 spec:
   selector:
-    app: lpnode
+    app: {{ $fullName }}
   type: ClusterIP
   ports:
     - protocol: TCP
-      name: lpnode-api
+      name: {{ $fullName }}-api
       port: 9202
       targetPort: 9202
