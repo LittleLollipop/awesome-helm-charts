@@ -1,7 +1,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: ingress-obridge-chain-client-evm
+  name: ingress-obridge-chain-client-evm-{{ .Values.evm.system_chain_id }}
 spec:
   entryPoints:
     - web
