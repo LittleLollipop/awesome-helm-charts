@@ -226,6 +226,16 @@ entries:
     version: 0.0.1
   obridge-lpnode:
   - apiVersion: v2
+    appVersion: 0.0.5
+    created: "2022-11-06T07:02:15.358644351Z"
+    description: Obridge lpnode
+    digest: a837b1631e16edf828b16450aeea3640bd171cdfdcb67ff5c2e3c9bc184762ec
+    name: obridge-lpnode
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-lpnode-0.0.5/obridge-lpnode-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
     appVersion: 0.0.4
     created: "2022-11-06T06:48:57.744086924Z"
     description: Obridge lpnode
@@ -318,4 +328,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-06T06:48:57.744138329Z"
+generated: "2022-11-06T07:02:15.358904949Z"
