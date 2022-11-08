@@ -307,6 +307,16 @@ entries:
     version: 0.0.1
   obridge-relay:
   - apiVersion: v2
+    appVersion: 0.0.4
+    created: "2022-11-08T06:56:09.644512776Z"
+    description: Obridge Relay
+    digest: d0814957a6f8826892321dd64cd387acde2c6ab254586aadf9f2c873ef344c28
+    name: obridge-relay
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-relay-0.0.4/obridge-relay-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
     appVersion: 0.0.3
     created: "2022-11-04T09:09:58.605824077Z"
     description: Obridge Relay
@@ -368,4 +378,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-06T07:52:37.650807719Z"
+generated: "2022-11-08T06:56:09.644663078Z"
