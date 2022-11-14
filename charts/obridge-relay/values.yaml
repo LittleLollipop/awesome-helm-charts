@@ -1,4 +1,4 @@
 domain:
   name: obridge-api-relay.edge-dev.xyz
 image:
-  name: kldtks/edge:obridge-relay-e8039345
+  name: kldtks/edge:obridge-relay-12a34cd6
