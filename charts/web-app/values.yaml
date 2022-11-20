@@ -1,0 +1,4 @@
+domain:
+  name: obridge-web-app.edge-dev.xyz
+image:
+  name: kldtks/edge:obridge-web-app-
