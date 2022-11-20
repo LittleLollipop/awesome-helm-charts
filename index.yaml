@@ -827,6 +827,17 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-relay-adminpanel-0.0.1/obridge-relay-adminpanel-0.0.1.tgz
     version: 0.0.1
+  obridge-web-app:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-11-20T04:51:08.462029862Z"
+    description: Obridge Web App
+    digest: b62e7c9ab83ac832195f80ead2f3cc6b5538deffcc8f35b38ec1ce6f19fd98a7
+    name: obridge-web-app
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-web-app-0.0.1/obridge-web-app-0.0.1.tgz
+    version: 0.0.1
   simple:
   - apiVersion: v2
     appVersion: 1.16.1
@@ -848,4 +859,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-19T18:36:17.148537283Z"
+generated: "2022-11-20T04:51:08.462288366Z"
