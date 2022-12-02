@@ -1,0 +1,22 @@
+domain:
+  name: obridge-api-relay.edge-dev.xyz
+near:
+  contract: otv1.saidev.testnet
+  system_chain_id: '397'
+  start_block: '107000867'
+  lake:
+    bucket: near-lake-data-testnet
+    region: eu-central-1
+  connection:
+    networkId: testnet
+    nodeUrl: https://rpc.testnet.near.org
+    walletUrl: https://wallet.testnet.near.org
+    helperUrl: https://helper.testnet.near.org
+    explorerUrl: https://explorer.testnet.near.org
+redis:
+  password_key: obridge-relay-db-redis
+  host: obridge-relay-db-redis-master
+nameOverride: ''
+fullnameOverride: ''
+image:
+  name: kldtks/edge:obridge-chain-client-near-3feb7936

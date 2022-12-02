@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "obridge-chain-client-near.fullname" . }}-{{ .Values.near.system_chain_id }}
+  labels:
+    app: {{ include "obridge-chain-client-near.fullname" . }}-{{ .Values.near.system_chain_id }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "obridge-chain-client-near.fullname" . }}-{{ .Values.near.system_chain_id }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "obridge-chain-client-near.fullname" . }}-{{ .Values.near.system_chain_id }}
+    spec:
+      containers:
+      - name: {{ include "obridge-chain-client-near.fullname" . }}-{{ .Values.near.system_chain_id }}
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 9100
+        env:
+          - name: REDIS_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ .Values.redis.password_key }}
+                key: redis-password
+          - name: NEAR_CLIENT_PORT
+            value: "9100"
+          - name: REDIS_HOST
+            value: "{{ .Values.redis.host }}"
+          - name: CONTRACT_ADDRESS
+            value: "{{ .Values.near.contract }}"
+          - name: SYSTEM_CHAIN_ID
+            value: "{{ .Values.near.system_chain_id }}"
+          - name: START_BLOCK
+            value: "{{ .Values.near.start_block }}"
+          - name: LAKE_BUCKET
+            value: "{{ .Values.near.lake.bucket}}"
+          - name: LAKE_REGION
+            value: "{{ .Values.near.lake.region}}"
+          - name: CONNECTION_NETWORKID
+            value: "{{ .Values.near.connection.networkId}}"
+          - name: CONNECTION_NODEURL
+            value: "{{ .Values.near.connection.nodeUrl}}"
+          - name: CONNECTION_WALLETURL
+            value: "{{ .Values.near.connection.walletUrl}}"
+          - name: CONNECTION_HELPERURL
+            value: "{{ .Values.near.connection.helperUrl}}"
+          - name: CONNECTION_EXPLORERURL
+            value: "{{ .Values.near.connection.explorerUrl}}"
+            
+
