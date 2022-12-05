@@ -39,6 +39,8 @@ spec:
             value: "{{ .Values.near.lake.bucket}}"
           - name: LAKE_REGION
             value: "{{ .Values.near.lake.region}}"
+          - name: LAKE_POOLSIZE
+            value: "{{ .Values.near.lake.poolsize}}"
           - name: CONNECTION_NETWORKID
             value: "{{ .Values.near.connection.networkId}}"
           - name: CONNECTION_NODEURL
