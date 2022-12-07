@@ -426,6 +426,16 @@ entries:
     version: 0.0.1
   obridge-chain-client-near:
   - apiVersion: v2
+    appVersion: 0.0.48
+    created: "2022-12-07T07:04:21.486789978Z"
+    description: Obridge Chain Client Near
+    digest: abab66a33018772b72be59ae19b3beb3d5ce12ed81e910032c38d1c46e6579bb
+    name: obridge-chain-client-near
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-chain-client-near-0.0.48/obridge-chain-client-near-0.0.48.tgz
+    version: 0.0.48
+  - apiVersion: v2
     appVersion: 0.0.47
     created: "2022-12-07T06:51:30.249688117Z"
     description: Obridge Chain Client Near
@@ -1370,4 +1380,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2022-12-07T06:51:30.250657528Z"
+generated: "2022-12-07T07:04:21.487870398Z"
