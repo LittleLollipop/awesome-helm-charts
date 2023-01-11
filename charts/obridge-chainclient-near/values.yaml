@@ -8,6 +8,8 @@ near:
     bucket: near-lake-data-testnet
     region: eu-central-1
     poolsize: 200
+    key_id: ''
+    access_key: ''
   connection:
     networkId: testnet
     nodeUrl: https://rpc.testnet.near.org
@@ -20,4 +22,4 @@ redis:
 nameOverride: ''
 fullnameOverride: ''
 image:
-  name: kldtks/edge:obridge-chain-client-near-03f8e2bc
+  name: kldtks/edge:obridge-chain-client-near-6e32bb91

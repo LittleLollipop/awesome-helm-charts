@@ -51,5 +51,8 @@ spec:
             value: "{{ .Values.near.connection.helperUrl}}"
           - name: CONNECTION_EXPLORERURL
             value: "{{ .Values.near.connection.explorerUrl}}"
-            
+          - name: AWS_ACCESS_KEY_ID
+            value: "{{ .Values.near.lake.key_id}}"
+          - name: AWS_SECRET_ACCESS_KEY
+            value: "{{ .Values.near.lake.access_key}}"
 
