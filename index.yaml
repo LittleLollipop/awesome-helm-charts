@@ -1277,6 +1277,16 @@ entries:
     version: 0.0.1
   obridge-chain-client-xrp:
   - apiVersion: v2
+    appVersion: 0.0.10
+    created: "2023-02-07T10:05:09.477693889Z"
+    description: Obridge Chain Client XRP
+    digest: 455d47e4840c3ff7eb43cb5b372f8934e31cac92917e32eed01689359abf5b2c
+    name: obridge-chain-client-xrp
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-chain-client-xrp-0.0.10/obridge-chain-client-xrp-0.0.10.tgz
+    version: 0.0.10
+  - apiVersion: v2
     appVersion: 0.0.9
     created: "2023-02-07T10:00:18.217899965Z"
     description: Obridge Chain Client XRP
@@ -2061,4 +2071,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-02-07T10:00:18.218261162Z"
+generated: "2023-02-07T10:05:09.478207096Z"
