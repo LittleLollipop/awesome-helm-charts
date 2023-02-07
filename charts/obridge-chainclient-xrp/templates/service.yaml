@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "obridge-chain-client-xrp.fullname" . }}-server-{{ .Values.xrp.system_chain_id }}
+spec:
+  selector:
+    app: {{ include "obridge-chain-client-xrp.fullname" . }}-{{ .Values.xrp.system_chain_id }}
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      name: {{ include "obridge-chain-client-xrp.fullname" . }}-api-{{ .Values.xrp.system_chain_id }}
+      port: 9100
+      targetPort: 9100

@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-{{ include "obridge-chain-client-xrp.fullname" . }}-{{ .Values.xrp.system_chain_id }}
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/xrp-client-{{ .Values.xrp.system_chain_id }}/`)"
+      kind: Rule
+      services:
+        - name: {{ include "obridge-chain-client-xrp.fullname" . }}-server-{{ .Values.xrp.system_chain_id }}
+          port: 9100

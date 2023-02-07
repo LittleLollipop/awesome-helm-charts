@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "obridge-chain-client-xrp.fullname" . }}-{{ .Values.xrp.system_chain_id }}
+  labels:
+    app: {{ include "obridge-chain-client-xrp.fullname" . }}-{{ .Values.xrp.system_chain_id }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "obridge-chain-client-xrp.fullname" . }}-{{ .Values.xrp.system_chain_id }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "obridge-chain-client-xrp.fullname" . }}-{{ .Values.xrp.system_chain_id }}
+    spec:
+      containers:
+      - name: {{ include "obridge-chain-client-xrp.fullname" . }}-{{ .Values.xrp.system_chain_id }}
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 9100
+        env:
+          - name: REDIS_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ .Values.redis.password_key }}
+                key: redis-password
+          - name: xrp_CLIENT_PORT
+            value: "9100"
+          - name: REDIS_HOST
+            value: "{{ .Values.redis.host }}"
+          - name: RPC_URL
+            value: "{{ .Values.xrp.rpc.url }}"
+          - name: CONTRACT_ADDRESS
+            value: "{{ .Values.xrp.contract }}"
+          - name: SYSTEM_CHAIN_ID
+            value: "{{ .Values.xrp.system_chain_id }}"
+          - name: CHAIN_ID
+            value: "{{ .Values.xrp.chain_id }}"
+          - name: START_BLOCK
+            value: "{{ .Values.xrp.start_block }}"
+
