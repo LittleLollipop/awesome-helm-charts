@@ -25,7 +25,7 @@ spec:
               secretKeyRef:
                 name: {{ .Values.redis.password_key }}
                 key: redis-password
-          - name: xrp_CLIENT_PORT
+          - name: XRP_CLIENT_PORT
             value: "9100"
           - name: REDIS_HOST
             value: "{{ .Values.redis.host }}"
