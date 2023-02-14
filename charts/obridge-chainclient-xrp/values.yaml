@@ -5,10 +5,11 @@ xrp:
     url: wss://s.altnet.rippletest.net:51233
   system_chain_id: '144'
   start_block: '35179709'
+  dev_monitor: 'false'
 redis:
   password_key: obridge-relay-db-redis
   host: obridge-relay-db-redis-master
 nameOverride: ''
 fullnameOverride: ''
 image:
-  name: kldtks/edge:obridge-chain-client-xrp-2d97a402
+  name: kldtks/edge:obridge-chain-client-xrp-62def9f4

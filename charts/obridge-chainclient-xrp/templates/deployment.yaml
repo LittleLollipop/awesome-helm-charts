@@ -39,4 +39,6 @@ spec:
             value: "{{ .Values.xrp.chain_id }}"
           - name: START_BLOCK
             value: "{{ .Values.xrp.start_block }}"
+          - name: DEV_MONITOR
+            value: "{{ .Values.xrp.dev_monitor }}"
 
