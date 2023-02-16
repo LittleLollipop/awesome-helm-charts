@@ -1,4 +1,6 @@
 domain:
   name: obridge-web-app.edge-dev.xyz
+env:
+  TEST: 'true'
 image:
-  name: kldtks/edge:obridge-web-app-3e5c8b12
+  name: kldtks/edge:obridge-web-app-d744da38
