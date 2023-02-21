@@ -5,4 +5,4 @@ redis:
   host: obridge-relay-db-redis-master
   db: '5'
 image:
-  name: kldtks/edge:obridge-relay-fep-websocket-9ce05e3f
+  name: kldtks/edge:obridge-relay-fep-websocket-d2f4b025
