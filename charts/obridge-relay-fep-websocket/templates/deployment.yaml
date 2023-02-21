@@ -25,6 +25,10 @@ spec:
               secretKeyRef:
                 name: obridge-relay-db-redis
                 key: redis-password
+          - name: REDIS_HOST
+            value: "{{ .Values.redis.host }}"
+          - name: REDIS_DB
+            value: "{{ .Values.redis.db }}"
 ---
 apiVersion: apps/v1
 kind: Deployment

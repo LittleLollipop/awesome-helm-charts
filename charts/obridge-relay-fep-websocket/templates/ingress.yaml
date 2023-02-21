@@ -12,3 +12,4 @@ spec:
       services:
         - name: relay-fep-ws-loadbalance-server
           kind: TraefikService
+          passHostHeader: true

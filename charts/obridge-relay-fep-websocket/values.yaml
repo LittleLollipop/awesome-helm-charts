@@ -1,4 +1,8 @@
 domain:
   name: ws.obridge-api-relay.edge-dev.xyz
+redis:
+  password_key: obridge-relay-db-redis
+  host: obridge-relay-db-redis-master
+  db: '5'
 image:
-  name: kldtks/edge:obridge-relay-fep-websocket-ae09ebd4
+  name: kldtks/edge:obridge-relay-fep-websocket-8a617c47
