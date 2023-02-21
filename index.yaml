@@ -2421,6 +2421,16 @@ entries:
     version: 0.0.1
   obridge-relay-fep-websocket:
   - apiVersion: v2
+    appVersion: 0.0.2
+    created: "2023-02-21T05:36:13.375067203Z"
+    description: Obridge Relay Front-End Processor Websocket
+    digest: 3e8c5a929b5cc08459853cb07d09fafccfd723030466ecb35ded33f04a9a4a4b
+    name: obridge-relay-fep-websocket
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-relay-fep-websocket-0.0.2/obridge-relay-fep-websocket-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
     appVersion: 0.0.1
     created: "2023-02-21T05:03:00.797272962Z"
     description: Obridge Relay Front-End Processor Websocket
@@ -2602,4 +2612,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-02-21T05:03:00.79817536Z"
+generated: "2023-02-21T05:36:13.375494404Z"
