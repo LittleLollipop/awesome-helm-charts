@@ -2419,6 +2419,17 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-relay-adminpanel-0.0.1/obridge-relay-adminpanel-0.0.1.tgz
     version: 0.0.1
+  obridge-relay-fep-websocket:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-02-21T05:03:00.797272962Z"
+    description: Obridge Relay Front-End Processor Websocket
+    digest: bdfae7deafadb1aad918c3b35e944f76176cb6fda3b84e7f93c08b4de29517b7
+    name: obridge-relay-fep-websocket
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-relay-fep-websocket-0.0.1/obridge-relay-fep-websocket-0.0.1.tgz
+    version: 0.0.1
   obridge-web-app:
   - apiVersion: v2
     appVersion: 0.0.17
@@ -2591,4 +2602,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-02-21T03:56:56.184042682Z"
+generated: "2023-02-21T05:03:00.79817536Z"
