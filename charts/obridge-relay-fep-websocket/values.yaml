@@ -1,0 +1,4 @@
+domain:
+  name: ws.obridge-api-relay.edge-dev.xyz
+image:
+  name: kldtks/edge:obridge-relay-fep-websocket-ae09ebd4

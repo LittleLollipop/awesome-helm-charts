@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-obridge-relay-fep-websocket
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: "Host(`{{ .Values.domain.name }}`)"
+      kind: Rule
+      services:
+        - name: relay-fep-ws-loadbalance-server
+          kind: TraefikService

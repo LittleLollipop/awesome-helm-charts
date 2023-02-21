@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: relay-fep-ws-server-1
+spec:
+  selector:
+    app: relay-fep-websocket-1
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      name: relay-fep-websocket-api
+      port: 3000
+      targetPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: relay-fep-ws-server-2
+spec:
+  selector:
+    app: relay-fep-websocket-2
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      name: relay-fep-websocket-api
+      port: 3000
+      targetPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: relay-fep-ws-server-3
+spec:
+  selector:
+    app: relay-fep-websocket-3
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      name: relay-fep-websocket-api
+      port: 3000
+      targetPort: 3000
