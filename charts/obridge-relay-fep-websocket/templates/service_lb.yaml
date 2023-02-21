@@ -13,6 +13,7 @@ spec:
         sticky:
           cookie:
             name: server_id
+            httpOnly: true
       - name: relay-fep-ws-server-2
         kind: Service
         weight: 1
@@ -21,6 +22,7 @@ spec:
         sticky:
           cookie:
             name: server_id
+            httpOnly: true
       - name: relay-fep-ws-server-3
         kind: Service
         weight: 1
@@ -29,6 +31,7 @@ spec:
         sticky:
           cookie:
             name: server_id
+            httpOnly: true
     sticky:
       cookie:
         name: lvl1
