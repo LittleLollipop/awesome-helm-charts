@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: relay-utils-service
+spec:
+  selector:
+    app: relay-utils
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      name: relay-utils-api
+      port: 9000
+      targetPort: 9000

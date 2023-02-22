@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: relay-utils
+  labels:
+    app: relay-utils
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: relay-utils
+  template:
+    metadata:
+      labels:
+        app: relay-utils
+    spec:
+      containers:
+      - name: relay-utils
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 9000
+        env:
+          - name: REDIS_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: obridge-relay-db-redis
+                key: redis-password
+          - name: REDIS_HOST
+            value: obridge-relay-db-redis-master
+          - name: REDIS_DB
+            value: 5

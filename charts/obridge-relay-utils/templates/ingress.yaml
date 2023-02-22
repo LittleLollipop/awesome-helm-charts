@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-obridge-relay-utils
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/utils/`)"
+      kind: Rule
+      services:
+        - name: relay-utils-service
+          port: 9000
