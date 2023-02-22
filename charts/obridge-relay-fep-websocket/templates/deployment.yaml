@@ -43,6 +43,8 @@ spec:
                 fieldPath: status.podIP         
           - name: SERVER_NAME
             value: relay-fep-ws-server-1
+          - name: CORS_ORIGIN
+            value: "{{ .Values.ws.cors.origin }}"
           
 ---
 apiVersion: apps/v1
@@ -90,6 +92,9 @@ spec:
                 fieldPath: status.podIP         
           - name: SERVER_NAME
             value: relay-fep-ws-server-2
+          - name: CORS_ORIGIN
+            value: "{{ .Values.ws.cors.origin }}"
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -136,3 +141,5 @@ spec:
                 fieldPath: status.podIP         
           - name: SERVER_NAME
             value: relay-fep-ws-server-3
+          - name: CORS_ORIGIN
+            value: "{{ .Values.ws.cors.origin }}"

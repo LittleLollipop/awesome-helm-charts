@@ -4,5 +4,9 @@ redis:
   password_key: obridge-relay-db-redis
   host: obridge-relay-db-redis-master
   db: '5'
+ws:
+  cors:
+    origin: >-
+      http://localhost,https://obridge-web-app.edge-dev.xyz/,http://mainnet-obridge-web-app.edge-dev.xyz/
 image:
-  name: kldtks/edge:obridge-relay-fep-websocket-718c5fdf
+  name: kldtks/edge:obridge-relay-fep-websocket-9b9bc17c
