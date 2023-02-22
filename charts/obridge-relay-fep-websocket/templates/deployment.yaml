@@ -33,6 +33,16 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.name
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP         
+          - name: SERVER_NAME
+            value: relay-fep-ws-server-1
           
 ---
 apiVersion: apps/v1
@@ -70,6 +80,16 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.name
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP         
+          - name: SERVER_NAME
+            value: relay-fep-ws-server-2
 ---
 apiVersion: apps/v1
 kind: Deployment
