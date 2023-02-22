@@ -29,6 +29,11 @@ spec:
             value: "{{ .Values.redis.host }}"
           - name: REDIS_DB
             value: "{{ .Values.redis.db }}"
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -61,6 +66,10 @@ spec:
             value: "{{ .Values.redis.host }}"
           - name: REDIS_DB
             value: "{{ .Values.redis.db }}"
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -93,3 +102,17 @@ spec:
             value: "{{ .Values.redis.host }}"
           - name: REDIS_DB
             value: "{{ .Values.redis.db }}"
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP         
+          - name: SERVER_NAME
+            value: relay-fep-ws-server-3
