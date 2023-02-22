@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app: relay-fep-websocket-1
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - protocol: TCP
       name: relay-fep-websocket-api
@@ -19,7 +19,7 @@ metadata:
 spec:
   selector:
     app: relay-fep-websocket-2
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - protocol: TCP
       name: relay-fep-websocket-api
