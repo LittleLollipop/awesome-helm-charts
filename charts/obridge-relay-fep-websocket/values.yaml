@@ -13,4 +13,4 @@ ws:
     origin: >-
       http://localhost,https://obridge-web-app.edge-dev.xyz/,http://mainnet-obridge-web-app.edge-dev.xyz/
 image:
-  name: kldtks/edge:obridge-relay-fep-websocket-915665d4
+  name: kldtks/edge:obridge-relay-fep-websocket-f9594492
