@@ -50,6 +50,8 @@ spec:
             value: "{{ .Values.ws.url_cookie_math }}"
           - name: DOMAIN
             value: "{{ .Values.ws.cookie.domain }}" 
+          - name: PATH
+            value: "{{ .Values.ws.cookie.path }}" 
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -103,6 +105,8 @@ spec:
             value: "{{ .Values.ws.url_cookie_math }}"
           - name: DOMAIN
             value: "{{ .Values.ws.cookie.domain }}" 
+          - name: PATH
+            value: "{{ .Values.ws.cookie.path }}" 
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -156,3 +160,5 @@ spec:
             value: "{{ .Values.ws.url_cookie_math }}"
           - name: DOMAIN
             value: "{{ .Values.ws.cookie.domain }}"  
+          - name: PATH
+            value: "{{ .Values.ws.cookie.path }}" 

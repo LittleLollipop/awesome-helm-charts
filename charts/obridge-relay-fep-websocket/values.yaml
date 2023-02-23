@@ -8,8 +8,9 @@ ws:
   url_cookie_math: http://relay-utils-service:9000/utils/wscookie
   cookie:
     domain: edge-dev.xyz
+    path: /socket.io
   cors:
     origin: >-
       http://localhost,https://obridge-web-app.edge-dev.xyz/,http://mainnet-obridge-web-app.edge-dev.xyz/
 image:
-  name: kldtks/edge:obridge-relay-fep-websocket-da4ff071
+  name: kldtks/edge:obridge-relay-fep-websocket-7d0b2d67
