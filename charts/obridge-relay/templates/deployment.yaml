@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: relay
+  labels:
+    app: relay
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: relay
+  template:
+    metadata:
+      labels:
+        app: relay
+    spec:
+      containers:
+      - name: relay
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 9102
+        env:
+          - name: POSTGRESQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: obridge-relay-db-postgresql
+                key: postgres-password
+          - name: REDIS_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: obridge-relay-db-redis
+                key: redis-password
+
