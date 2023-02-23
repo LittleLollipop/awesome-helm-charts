@@ -7,7 +7,7 @@ spec:
     - web
     - websecure
   routes:
-    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix('/connect')"
+    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/connect`)"
       kind: Rule
       services:
         - name: relay-fep-ws-loadbalance-server-redirect
