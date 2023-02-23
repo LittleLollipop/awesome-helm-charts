@@ -48,9 +48,9 @@ spec:
             value: "{{ .Values.ws.cors.origin }}"
           - name: URL_COOKIE_MATH
             value: "{{ .Values.ws.url_cookie_math }}"
-          - name: DOMAIN
+          - name: COOKIE_DOMAIN
             value: "{{ .Values.ws.cookie.domain }}" 
-          - name: PATH
+          - name: COOKIE_PATH
             value: "{{ .Values.ws.cookie.path }}" 
 ---
 apiVersion: apps/v1
@@ -103,9 +103,9 @@ spec:
             value: "{{ .Values.ws.cors.origin }}"
           - name: URL_COOKIE_MATH
             value: "{{ .Values.ws.url_cookie_math }}"
-          - name: DOMAIN
+          - name: COOKIE_DOMAIN
             value: "{{ .Values.ws.cookie.domain }}" 
-          - name: PATH
+          - name: COOKIE_PATH
             value: "{{ .Values.ws.cookie.path }}" 
 ---
 apiVersion: apps/v1
@@ -158,7 +158,7 @@ spec:
             value: "{{ .Values.ws.cors.origin }}"
           - name: URL_COOKIE_MATH
             value: "{{ .Values.ws.url_cookie_math }}"
-          - name: DOMAIN
+          - name: COOKIE_DOMAIN
             value: "{{ .Values.ws.cookie.domain }}"  
-          - name: PATH
+          - name: COOKIE_PATH
             value: "{{ .Values.ws.cookie.path }}" 
