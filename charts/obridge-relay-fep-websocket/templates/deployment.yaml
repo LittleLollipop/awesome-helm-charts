@@ -19,6 +19,7 @@ spec:
         image: {{ .Values.image.name }}
         ports:
           - containerPort: 3000
+          - containerPort: 3001
         env:
           - name: REDIS_PASSWORD
             valueFrom:
@@ -45,6 +46,8 @@ spec:
             value: relay-fep-ws-server-1
           - name: CORS_ORIGIN
             value: "{{ .Values.ws.cors.origin }}"
+          - name: URL_COOKIE_MATH
+            value: "{{ .Values.ws.url_cookie_math }}"
           
 ---
 apiVersion: apps/v1
@@ -54,7 +57,7 @@ metadata:
   labels:
     app: relay-fep-websocket-2
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: relay-fep-websocket-2
@@ -68,6 +71,7 @@ spec:
         image: {{ .Values.image.name }}
         ports:
           - containerPort: 3000
+          - containerPort: 3001
         env:
           - name: REDIS_PASSWORD
             valueFrom:
@@ -94,7 +98,8 @@ spec:
             value: relay-fep-ws-server-2
           - name: CORS_ORIGIN
             value: "{{ .Values.ws.cors.origin }}"
-
+          - name: URL_COOKIE_MATH
+            value: "{{ .Values.ws.url_cookie_math }}"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -117,6 +122,7 @@ spec:
         image: {{ .Values.image.name }}
         ports:
           - containerPort: 3000
+          - containerPort: 3001
         env:
           - name: REDIS_PASSWORD
             valueFrom:
@@ -143,3 +149,5 @@ spec:
             value: relay-fep-ws-server-3
           - name: CORS_ORIGIN
             value: "{{ .Values.ws.cors.origin }}"
+          - name: URL_COOKIE_MATH
+            value: "{{ .Values.ws.url_cookie_math }}"

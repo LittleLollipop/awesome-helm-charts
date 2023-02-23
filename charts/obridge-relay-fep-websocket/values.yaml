@@ -5,8 +5,9 @@ redis:
   host: obridge-relay-db-redis-master
   db: '5'
 ws:
+  url_cookie_math: http://relay-utils-service:9000/utils/wscookie
   cors:
     origin: >-
       http://localhost,https://obridge-web-app.edge-dev.xyz/,http://mainnet-obridge-web-app.edge-dev.xyz/
 image:
-  name: kldtks/edge:obridge-relay-fep-websocket-b4a94ad4
+  name: kldtks/edge:obridge-relay-fep-websocket-f926056e
