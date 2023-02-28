@@ -13,3 +13,9 @@ spec:
         - name: relay-fep-ws-loadbalance-server
           kind: TraefikService
           passHostHeader: true
+          sticky:
+              cookie:
+                httpOnly: true
+                name: lvl1
+                sameSite: none
+                secure: true

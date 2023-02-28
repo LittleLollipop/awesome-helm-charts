@@ -5,33 +5,42 @@ metadata:
 spec:
   weighted:
     services:
-      - name: relay-fep-ws-server-1
-        kind: Service
-        port: 3000
+      - kind: Service
+        name: relay-fep-ws-server-1
         passHostHeader: true
-        weight: 1
+        port: 3000
         sticky:
           cookie:
-            name: server_id
             httpOnly: true
-      - name: relay-fep-ws-server-2
-        kind: Service
-        weight: 1
-        port: 3000
+            name: lvl2
+            sameSite: none
+            secure: true
+        weight: 10
+      - kind: Service
+        name: relay-fep-ws-server-2
         passHostHeader: true
+        port: 3000
         sticky:
           cookie:
-            name: server_id
             httpOnly: true
-      - name: relay-fep-ws-server-3
-        kind: Service
-        weight: 1
-        port: 3000
+            name: lvl2
+            sameSite: none
+            secure: true
+        weight: 10
+      - kind: Service
+        name: relay-fep-ws-server-3
         passHostHeader: true
+        port: 3000
         sticky:
           cookie:
-            name: server_id
             httpOnly: true
+            name: lvl2
+            sameSite: none
+            secure: true
+        weight: 10
     sticky:
       cookie:
+        httpOnly: true
         name: lvl1
+        sameSite: none
+        secure: true
