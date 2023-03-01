@@ -143,6 +143,17 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/edge-desktop-0.0.1/edge-desktop-0.0.1.tgz
     version: 0.0.1
+  lp_main:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-01T10:21:41.182348718Z"
+    description: A Helm chart for Kubernetes
+    digest: d54768ac59f8a023a639767576eff7e66c137cdeb16a5c0cf8811f1014bc9f3f
+    name: lp_main
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/lp_main-0.1.0/lp_main-0.1.0.tgz
+    version: 0.1.0
   obridge-chain-client-evm:
   - apiVersion: v2
     appVersion: 0.0.48
@@ -3103,4 +3114,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-02-28T07:00:01.794958968Z"
+generated: "2023-03-01T10:21:41.182935314Z"
