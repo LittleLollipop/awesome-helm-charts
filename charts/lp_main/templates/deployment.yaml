@@ -1,61 +1,40 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "lp_main.fullname" . }}
+  name: {{ include "obridge-lpnode.fullname" . }}
   labels:
-    {{- include "lp_main.labels" . | nindent 4 }}
+    app: {{ include "obridge-lpnode.fullname" . }}
 spec:
-  {{- if not .Values.autoscaling.enabled }}
-  replicas: {{ .Values.replicaCount }}
-  {{- end }}
+  replicas: 1
   selector:
     matchLabels:
-      {{- include "lp_main.selectorLabels" . | nindent 6 }}
+      app: {{ include "obridge-lpnode.fullname" . }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
-      annotations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
       labels:
-        {{- include "lp_main.selectorLabels" . | nindent 8 }}
+        app: {{ include "obridge-lpnode.fullname" . }}
     spec:
-      {{- with .Values.imagePullSecrets }}
-      imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      serviceAccountName: {{ include "lp_main.serviceAccountName" . }}
-      securityContext:
-        {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ .Chart.Name }}
-          securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          ports:
-            - name: http
-              containerPort: {{ .Values.service.port }}
-              protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
-      {{- with .Values.nodeSelector }}
-      nodeSelector:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.affinity }}
-      affinity:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.tolerations }}
-      tolerations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+      - name: {{ include "obridge-lpnode.fullname" . }}
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 18081
+        env:
+          - name: OBRIDGE_LPNODE_DB_REDIS_MASTER_SERVICE_HOST
+            value: "obridge-lpnode-db-redis-master"
+          - name: REDIS_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: obridge-lpnode-db-redis
+                key: redis-password
+          - name: NODE_ENV
+            value: "{{ .Values.lpconfig.market_env }}"
+          - name: LP_NODE_DATA_MONGO_URL
+            value: "obridge-lpnode-db-mongodb"
+          - name: LP_MARKET_SERVICE_URL
+            value: "obridge-lpnode-market"
+          - name: KUBERNETES_SERVICE_PORT_HTTPS
+            value: 1000
+
+# ENV LP_NODE_DATA_MONGO_URL=mongodb://root:123456@192.168.50.201:27017/lp_store?authSource=admin
+

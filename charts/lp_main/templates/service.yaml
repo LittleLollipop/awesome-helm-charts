@@ -1,15 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "lp_main.fullname" . }}
-  labels:
-    {{- include "lp_main.labels" . | nindent 4 }}
+  name: {{ include "obridge-lpnode.fullname" . }}-server
 spec:
-  type: {{ .Values.service.type }}
-  ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
   selector:
-    {{- include "lp_main.selectorLabels" . | nindent 4 }}
+    app: {{ include "obridge-lpnode.fullname" . }}
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      name: {{ include "obridge-lpnode.fullname" . }}-api
+      port: 18081
+      targetPort: 18081
