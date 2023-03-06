@@ -164,6 +164,17 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/lp_main-0.1.0/lp_main-0.1.0.tgz
     version: 0.1.0
+  lpnode-dashboard:
+  - apiVersion: v2
+    appVersion: 0.0.2
+    created: "2023-03-06T09:58:25.374019484Z"
+    description: LPNode Dashboard
+    digest: ce0dcfb6baf31e5a9c6cabe327e6db20463217ee477b86a4cb12166feb0bb20b
+    name: lpnode-dashboard
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/lpnode-dashboard-0.0.2/lpnode-dashboard-0.0.2.tgz
+    version: 0.0.2
   obridge-chain-client-evm:
   - apiVersion: v2
     appVersion: 0.0.48
@@ -3124,4 +3135,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-01T12:16:17.45360807Z"
+generated: "2023-03-06T09:58:25.37467489Z"
