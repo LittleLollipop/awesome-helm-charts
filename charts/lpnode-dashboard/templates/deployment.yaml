@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "lpnode-dashboard.fullname" . }}
+  labels:
+    app: {{ include "lpnode-dashboard.fullname" . }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "lpnode-dashboard.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "lpnode-dashboard.fullname" . }}
+    spec:
+      containers:
+      - name: {{ include "lpnode-dashboard.fullname" . }}
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 9000
+
