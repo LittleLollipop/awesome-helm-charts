@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "obridge-lpnode.name" -}}
+{{- define "lpnode-admin.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "obridge-lpnode.fullname" -}}
+{{- define "lpnode-admin.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "obridge-lpnode.chart" -}}
+{{- define "lpnode-admin.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "obridge-lpnode.labels" -}}
-helm.sh/chart: {{ include "obridge-lpnode.chart" . }}
-{{ include "obridge-lpnode.selectorLabels" . }}
+{{- define "lpnode-admin.labels" -}}
+helm.sh/chart: {{ include "lpnode-admin.chart" . }}
+{{ include "lpnode-admin.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "obridge-lpnode.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "obridge-lpnode.name" . }}
+{{- define "lpnode-admin.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "lpnode-admin.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "obridge-lpnode.serviceAccountName" -}}
+{{- define "lpnode-admin.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "obridge-lpnode.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "lpnode-admin.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
