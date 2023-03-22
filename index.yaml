@@ -697,6 +697,16 @@ entries:
     version: 0.0.1
   lpnode-dashboard:
   - apiVersion: v2
+    appVersion: 0.0.5
+    created: "2023-03-22T14:03:06.048220093Z"
+    description: LPNode Dashboard
+    digest: 8431849377ad0ab422bfefe901600a13be685dd65e9103c647849d28a972e61b
+    name: lpnode-dashboard
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/lpnode-dashboard-0.0.5/lpnode-dashboard-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
     appVersion: 0.0.4
     created: "2023-03-22T13:38:53.795746594Z"
     description: LPNode Dashboard
@@ -3676,4 +3686,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-22T13:38:53.796555897Z"
+generated: "2023-03-22T14:03:06.048838289Z"
