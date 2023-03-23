@@ -7,7 +7,7 @@ spec:
     - web
     - websecure
   routes:
-    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/lpnode/`)"
+    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/admin/`)"
       kind: Rule
       services:
         - name: {{ include "lpnode-admin.fullname" . }}-server
