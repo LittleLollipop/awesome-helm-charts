@@ -13,4 +13,4 @@ redis:
 nameOverride: ''
 fullnameOverride: ''
 image:
-  name: kldtks/edge:obridge-chain-client-evm-be5ade01
+  name: kldtks/edge:obridge-chain-client-evm-e9f23571
