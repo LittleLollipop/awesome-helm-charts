@@ -266,6 +266,16 @@ entries:
     version: 0.1.0
   lpnode-admin:
   - apiVersion: v2
+    appVersion: 0.0.55
+    created: "2023-03-23T05:57:00.556552744Z"
+    description: Lpnode admin
+    digest: 1a173924b4ae7038553fc34c2e03b7f4d62455722331b94087674062d228fe7f
+    name: lpnode-admin
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/lpnode-admin-0.0.55/lpnode-admin-0.0.55.tgz
+    version: 0.0.55
+  - apiVersion: v2
     appVersion: 0.0.54
     created: "2023-03-23T05:13:10.264227121Z"
     description: Lpnode admin
@@ -3766,4 +3776,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-23T05:49:10.57724379Z"
+generated: "2023-03-23T05:57:00.557279959Z"
