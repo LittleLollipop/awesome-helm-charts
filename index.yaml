@@ -3776,6 +3776,16 @@ entries:
     version: 0.0.1
   obridge-web-app:
   - apiVersion: v2
+    appVersion: 0.0.22
+    created: "2023-03-24T09:33:39.222822399Z"
+    description: Obridge Web App
+    digest: 22a6a617c9e52f486069a72d087c8c0412cc4f080e1eb931fcb5343e4c214e9c
+    name: obridge-web-app
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-web-app-0.0.22/obridge-web-app-0.0.22.tgz
+    version: 0.0.22
+  - apiVersion: v2
     appVersion: 0.0.21
     created: "2023-03-24T02:48:14.336604093Z"
     description: Obridge Web App
@@ -3986,4 +3996,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-24T09:26:51.088925477Z"
+generated: "2023-03-24T09:33:39.223549589Z"
