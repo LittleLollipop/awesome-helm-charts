@@ -3,4 +3,4 @@ domain:
 nameOverride: ''
 fullnameOverride: ''
 image:
-  name: kldtks/edge:lpnode-dashboard-745b0090
+  name: kldtks/edge:lpnode-dashboard-4371bf2f
