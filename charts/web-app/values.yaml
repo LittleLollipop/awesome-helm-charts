@@ -3,4 +3,4 @@ domain:
 env:
   TEST: 'true'
 image:
-  name: kldtks/edge:obridge-web-app-1fa4003f
+  name: kldtks/edge:obridge-web-app-e75f1f4c

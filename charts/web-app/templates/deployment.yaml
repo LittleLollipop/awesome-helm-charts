@@ -22,4 +22,8 @@ spec:
         env: 
           - name: TEST
             value: "{{ .Values.env.TEST }}"
+        command:
+          - /bin/sh
+          - '-c'
+          - cp website_test website -r && /app/obridgeweb
 
