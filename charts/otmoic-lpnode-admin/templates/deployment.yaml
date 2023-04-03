@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "lpnode-admin.fullname" . }}
+  labels:
+    app: {{ include "lpnode-admin.fullname" . }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "lpnode-admin.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "lpnode-admin.fullname" . }}
+    spec:
+      containers:
+      - name: {{ include "lpnode-admin.fullname" . }}
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 18006
+        env:
+          - name: RELAY-ACCESS-URL
+            value: "https://obridge-api-relay.edge-dev.xyz"
+          - name: REDIS_PASS
+            valueFrom:
+              secretKeyRef:
+                name: obridge-lpnode-db-redis
+                key: redis-password
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: MONGODBPASS
+            valueFrom:
+              secretKeyRef:
+                name: obridge-lpnode-db-mongodb
+                key: mongodb-root-password

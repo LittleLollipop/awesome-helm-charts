@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-{{ include "lpnode-admin.fullname" . }}
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/admin/`)"
+      kind: Rule
+      services:
+        - name: {{ include "lpnode-admin.fullname" . }}-server
+          port: 18006

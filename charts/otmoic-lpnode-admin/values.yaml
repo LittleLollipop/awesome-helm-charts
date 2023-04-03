@@ -1,0 +1,6 @@
+domain:
+  name: obridge-api-lpnode.edge-dev.xyz
+nameOverride: ''
+fullnameOverride: ''
+image:
+  name: kldtks/edge:otmoic-lpnode-admin-
