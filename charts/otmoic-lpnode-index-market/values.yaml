@@ -1,0 +1,35 @@
+replicaCount: 1
+globalData:
+  test1: '00000'
+serviceConfig:
+  port: 18080
+image:
+  repository: magicpigdocker/lp-market:v0.1
+  pullPolicy: IfNotPresent
+  tag: ''
+  name: kldtks/edge:otmoic-lpnode-index-market-8ab5c91d
+imagePullSecrets: []
+nameOverride: ''
+fullnameOverride: ''
+podAnnotations: {}
+podSecurityContext: {}
+securityContext: {}
+ingress:
+  enabled: false
+  className: ''
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+resources: {}
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+nodeSelector: {}
+tolerations: []
+affinity: {}
