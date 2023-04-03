@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-{{ include "obridge-chain-client-near.fullname" . }}-{{ .Values.near.system_chain_id }}
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/near-client-{{ .Values.near.system_chain_id }}/`)"
+      kind: Rule
+      services:
+        - name: {{ include "obridge-chain-client-near.fullname" . }}-server-{{ .Values.near.system_chain_id }}
+          port: 9100
