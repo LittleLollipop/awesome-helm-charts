@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "obridge-lpnode.fullname" . }}
+  labels:
+    app: {{ include "obridge-lpnode.fullname" . }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "obridge-lpnode.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "obridge-lpnode.fullname" . }}
+    spec:
+      containers:
+      - name: {{ include "obridge-lpnode.fullname" . }}
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 9202
+        env:
+          - name: REDIS_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: obridge-lpnode-db-redis
+                key: redis-password
+          - name: LPNODE_URI
+            value: "{{ .Values.lpconfig.lpnode_uri }}"
+          - name: RELAY_URI
+            value: "{{ .Values.lpconfig.relay_uri }}"

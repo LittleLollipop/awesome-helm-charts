@@ -1,0 +1,9 @@
+domain:
+  name: obridge-api-lpnode.edge-dev.xyz
+lpconfig:
+  lpnode_uri: https://obridge-api-lpnode.edge-dev.xyz/lpnode
+  relay_uri: https://obridge-api-relay.edge-dev.xyz/relay
+nameOverride: ''
+fullnameOverride: ''
+image:
+  name: kldtks/edge:otmoic-lpnode-
