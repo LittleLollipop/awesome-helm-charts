@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: relay-server
+spec:
+  selector:
+    app: relay
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      name: relay-api
+      port: 9102
+      targetPort: 9102
