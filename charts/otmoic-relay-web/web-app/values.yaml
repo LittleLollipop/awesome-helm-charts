@@ -1,0 +1,9 @@
+
+domain:
+  name: 'obridge-web-app.edge-dev.xyz'
+
+env:
+  TEST: "true"
+
+image:
+  name: ''

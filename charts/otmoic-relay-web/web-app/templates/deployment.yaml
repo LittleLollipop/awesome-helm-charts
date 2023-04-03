@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app
+  labels:
+    app: web-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-app
+  template:
+    metadata:
+      labels:
+        app: web-app
+    spec:
+      containers:
+      - name: web-app
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 9000
+        env: 
+          - name: TEST
+            value: "{{ .Values.env.TEST }}"
+        command:
+          - /bin/sh
+          - '-c'
+          - cp website_test website -r && /app/obridgeweb
+
