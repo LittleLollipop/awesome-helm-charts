@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{ .Release.Name }}"
+  labels:
+    app: "{{ .Release.Name }}"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "{{ .Release.Name }}"
+  template:
+    metadata:
+      labels:
+        app: "{{ .Release.Name }}"
+    spec:
+      containers:
+        - name: "{{ .Release.Name }}"
+          image: "{{ .Values.image.repository }}"
+          ports:
+            - containerPort: 18080
+          env:
+            - name: GO_ENV
+              value: "production"
+            - name: SERVICE_PORT
+              value: "{{ .Values.serviceConfig.port }}"

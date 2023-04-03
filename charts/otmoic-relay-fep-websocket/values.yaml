@@ -1,0 +1,16 @@
+domain:
+  name: ws.obridge-api-relay.edge-dev.xyz
+redis:
+  password_key: obridge-relay-db-redis
+  host: obridge-relay-db-redis-master
+  db: '5'
+ws:
+  url_cookie_math: http://relay-utils-service:9000/utils/wscookie
+  cookie:
+    domain: edge-dev.xyz
+    path: /socket.io
+  cors:
+    origin: >-
+      http://localhost,https://obridge-web-app.edge-dev.xyz/,http://mainnet-obridge-web-app.edge-dev.xyz/
+image:
+  name: kldtks/edge:otmoic-relay-fep-websocket-

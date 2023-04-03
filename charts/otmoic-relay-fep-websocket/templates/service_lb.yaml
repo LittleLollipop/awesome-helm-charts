@@ -1,0 +1,46 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: TraefikService
+metadata:
+  name: relay-fep-ws-loadbalance-server
+spec:
+  weighted:
+    services:
+      - kind: Service
+        name: relay-fep-ws-server-1
+        passHostHeader: true
+        port: 3000
+        sticky:
+          cookie:
+            httpOnly: true
+            name: lvl2
+            sameSite: none
+            secure: true
+        weight: 10
+      - kind: Service
+        name: relay-fep-ws-server-2
+        passHostHeader: true
+        port: 3000
+        sticky:
+          cookie:
+            httpOnly: true
+            name: lvl2
+            sameSite: none
+            secure: true
+        weight: 10
+      - kind: Service
+        name: relay-fep-ws-server-3
+        passHostHeader: true
+        port: 3000
+        sticky:
+          cookie:
+            httpOnly: true
+            name: lvl2
+            sameSite: none
+            secure: true
+        weight: 10
+    sticky:
+      cookie:
+        httpOnly: true
+        name: lvl1
+        sameSite: none
+        secure: true

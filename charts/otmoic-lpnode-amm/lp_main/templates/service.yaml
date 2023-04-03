@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "obridge-lpnode.fullname" . }}-server
+spec:
+  selector:
+    app: {{ include "obridge-lpnode.fullname" . }}
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      name: {{ include "obridge-lpnode.fullname" . }}-api
+      port: 18081
+      targetPort: 18081

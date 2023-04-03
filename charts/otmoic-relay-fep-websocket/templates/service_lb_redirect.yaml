@@ -1,0 +1,22 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: TraefikService
+metadata:
+  name: relay-fep-ws-loadbalance-server-redirect
+spec:
+  weighted:
+    services:
+      - name: relay-fep-ws-server-1
+        kind: Service
+        port: 3001
+        passHostHeader: true
+        weight: 1
+      - name: relay-fep-ws-server-2
+        kind: Service
+        weight: 1
+        port: 3001
+        passHostHeader: true
+      - name: relay-fep-ws-server-3
+        kind: Service
+        weight: 1
+        port: 3001
+        passHostHeader: true

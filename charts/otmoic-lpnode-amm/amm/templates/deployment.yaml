@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{ .Release.Name }}"
+  labels:
+    app: "{{ .Release.Name }}"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "{{ .Release.Name }}"
+  template:
+    metadata:
+      labels:
+        app: "{{ .Release.Name }}"
+    spec:
+      containers:
+        - name: "{{ .Release.Name }}"
+          image: "{{ .Values.image.repository }}"
+          ports:
+            - containerPort: 18081
+          env:
+            - name: LPNODE_URI
+              value: "{{ .Values.globalData.test1 }}"
+            - name: NODE_ENV
+              value: "production"
+            - name: KUBERNETES_SERVICE_PORT_HTTPS
+              value: "1000"
+            - name: OBRIDGE_LPNODE_DB_REDIS_MASTER_SERVICE_HOST
+              value: "192.168.50.201"
+              # value: "redis-release-master"
+            - name: OBRIDGE_LPNODE_DB_MONGO_MASTER_SERVICE_HOST
+              value: "192.168.50.201"
+              # "mongo-release-mongodb"
+            - name: LP_MARKET_SERVICE_HOST
+              value: "lp-market-server"
+            - name: MONGO_PASSWORD
+              value: "123456"
+              # valueFrom:
+              #   secretKeyRef:
+              #     name: mongo-release-mongodb
+              #     key: mongodb-root-password
+            - name: REDIS_PASSWORD
+              value: ""
+              # valueFrom:
+              #   secretKeyRef:
+              #     name: redis-release
+              #     key: redis-password
