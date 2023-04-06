@@ -5,4 +5,4 @@ lpconfig:
 nameOverride: ''
 fullnameOverride: ''
 image:
-  name: kldtks/edge:otmoic-lpnode-amm-a635373e
+  name: kldtks/edge:otmoic-lpnode-amm-2c5c6fb3
