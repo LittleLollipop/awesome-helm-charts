@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "relay-dashboard.fullname" . }}
+  labels:
+    app: {{ include "relay-dashboard.fullname" . }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "relay-dashboard.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "relay-dashboard.fullname" . }}
+    spec:
+      containers:
+      - name: {{ include "relay-dashboard.fullname" . }}
+        image: {{ .Values.image.name }}
+        ports:
+          - containerPort: 9000
+

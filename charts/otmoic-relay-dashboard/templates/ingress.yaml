@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-{{ include "relay-dashboard.fullname" . }}
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/dashboard/`)"
+      kind: Rule
+      services:
+        - name: {{ include "relay-dashboard.fullname" . }}-server
+          port: 9000

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "relay-dashboard.fullname" . }}-server
+spec:
+  selector:
+    app: {{ include "relay-dashboard.fullname" . }}
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      name: {{ include "relay-dashboard.fullname" . }}-api
+      port: 9000
+      targetPort: 9000

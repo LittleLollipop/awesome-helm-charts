@@ -1,0 +1,6 @@
+domain:
+  name: obridge-api-relay.edge-dev.xyz
+nameOverride: ''
+fullnameOverride: ''
+image:
+  name: kldtks/edge:otmoic-relay-dashboard-1da5c5b1
