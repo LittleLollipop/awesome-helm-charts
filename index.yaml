@@ -4023,6 +4023,16 @@ entries:
     version: 0.0.1
   obridge-relay-adminpanel:
   - apiVersion: v2
+    appVersion: 0.0.3
+    created: "2023-04-10T02:49:37.204823453Z"
+    description: Obridge Relay Console
+    digest: 144aad2f29096c0a3ea38ade20489b99dd7c564700a660e37834784266c97055
+    name: obridge-relay-adminpanel
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-relay-adminpanel-0.0.3/obridge-relay-adminpanel-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
     appVersion: 0.0.2
     created: "2022-11-04T03:38:49.044499582Z"
     description: Obridge Relay Console
@@ -4756,4 +4766,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-07T12:08:36.991307145Z"
+generated: "2023-04-10T02:49:37.205610647Z"
