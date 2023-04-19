@@ -3,4 +3,4 @@ domain:
 nameOverride: ''
 fullnameOverride: ''
 image:
-  name: kldtks/edge:otmoic-lpnode-admin-c86c5d29
+  name: kldtks/edge:otmoic-lpnode-admin-aba36454
