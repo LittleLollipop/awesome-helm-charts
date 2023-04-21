@@ -4937,6 +4937,16 @@ entries:
     version: 0.0.1
   otmoic-lpnode-amm-analyze:
   - apiVersion: v2
+    appVersion: 0.1.4
+    created: "2023-04-21T07:42:37.528979264Z"
+    description: A Helm chart for Kubernetes
+    digest: a1e2ebf904469650b1a206de0dbcaf5acd81a890702eae9fb8b969f2cd4c5054
+    name: otmoic-lpnode-amm-analyze
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/otmoic-lpnode-amm-analyze-0.1.4/otmoic-lpnode-amm-analyze-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: 0.1.3
     created: "2023-04-21T06:45:28.818685978Z"
     description: A Helm chart for Kubernetes
@@ -4987,4 +4997,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-21T07:10:18.410468926Z"
+generated: "2023-04-21T07:42:37.530093861Z"
