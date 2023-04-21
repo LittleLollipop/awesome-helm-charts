@@ -4895,6 +4895,17 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/obridge-web-app-0.0.1/obridge-web-app-0.0.1.tgz
     version: 0.0.1
+  otmoic-lpnode-amm-analyze:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2023-04-21T05:44:36.523698437Z"
+    description: A Helm chart for Kubernetes
+    digest: 4ac17fabcb5ac2e49fac70e405640e930f14aeb3e36edf4805f23027e6e9a4f8
+    name: otmoic-lpnode-amm-analyze
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/otmoic-lpnode-amm-analyze-0.1.1/otmoic-lpnode-amm-analyze-0.1.1.tgz
+    version: 0.1.1
   simple:
   - apiVersion: v2
     appVersion: 1.16.1
@@ -4916,4 +4927,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-20T12:28:34.688256381Z"
+generated: "2023-04-21T05:44:36.524797975Z"
