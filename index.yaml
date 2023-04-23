@@ -143,6 +143,17 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/edge-desktop-0.0.1/edge-desktop-0.0.1.tgz
     version: 0.0.1
+  lp-market:
+  - apiVersion: v2
+    appVersion: 0.1.17
+    created: "2023-04-23T13:42:56.54650378Z"
+    description: A Helm chart for Kubernetes
+    digest: 21b39cd734ce26619e3e35efcf1e9f717bf5f8eecdc9ddfe459841053a80a209
+    name: lp-market
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/lp-market-0.1.17/lp-market-0.1.17.tgz
+    version: 0.1.17
   lp_main:
   - apiVersion: v2
     appVersion: 0.1.99
@@ -5117,4 +5128,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-23T12:45:16.736674331Z"
+generated: "2023-04-23T13:42:56.547251377Z"
