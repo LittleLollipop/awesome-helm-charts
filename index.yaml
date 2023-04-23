@@ -145,6 +145,16 @@ entries:
     version: 0.0.1
   lp-market:
   - apiVersion: v2
+    appVersion: 0.1.18
+    created: "2023-04-23T13:47:38.897461813Z"
+    description: A Helm chart for Kubernetes
+    digest: 05813c4c9ca2932888d68283a9acd0db70aa6b9681347c135154d6b86df394b9
+    name: lp-market
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/lp-market-0.1.18/lp-market-0.1.18.tgz
+    version: 0.1.18
+  - apiVersion: v2
     appVersion: 0.1.17
     created: "2023-04-23T13:42:56.54650378Z"
     description: A Helm chart for Kubernetes
@@ -5128,4 +5138,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-23T13:42:56.547251377Z"
+generated: "2023-04-23T13:47:38.898391634Z"
