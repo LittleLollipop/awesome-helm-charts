@@ -7,7 +7,7 @@ image:
   repository: magicpigdocker/lp-market:v0.1
   pullPolicy: IfNotPresent
   tag: ''
-  name: kldtks/edge:otmoic-lpnode-index-market-8ab5c91d
+  name: kldtks/edge:otmoic-lpnode-index-market-36b0792f
 imagePullSecrets: []
 nameOverride: ''
 fullnameOverride: ''
