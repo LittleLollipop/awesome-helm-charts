@@ -1,0 +1,8 @@
+domain:
+  name: obridge-api-lpnode.edge-dev.xyz
+lpconfig:
+  market_env: production
+nameOverride: ''
+fullnameOverride: ''
+image:
+  name: kldtks/edge:otmoic-lpnode-graphql-
