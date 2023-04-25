@@ -5137,6 +5137,17 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/otmoic-lpnode-amm-analyze-0.1.1/otmoic-lpnode-amm-analyze-0.1.1.tgz
     version: 0.1.1
+  otmoic-lpnode-graphql:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2023-04-25T06:05:17.005371708Z"
+    description: A Helm chart for Kubernetes
+    digest: 52251e390ec9eeaeba60670a0dd7a271b3869e03697cb756d685f9af7fe1f455
+    name: otmoic-lpnode-graphql
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/otmoic-lpnode-graphql-0.1.1/otmoic-lpnode-graphql-0.1.1.tgz
+    version: 0.1.1
   simple:
   - apiVersion: v2
     appVersion: 1.16.1
@@ -5158,4 +5169,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-23T14:09:50.258209171Z"
+generated: "2023-04-25T06:05:17.006732219Z"
