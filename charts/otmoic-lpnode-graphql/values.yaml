@@ -5,4 +5,4 @@ lpconfig:
 nameOverride: ''
 fullnameOverride: ''
 image:
-  name: kldtks/edge:otmoic-lpnode-graphql-
+  name: kldtks/edge:otmoic-lpnode-graphql-3bfc2ace

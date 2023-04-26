@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-{{ include "lotmoic-lpnode-graphql.fullname" . }}
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: "Host(`{{ .Values.domain.name }}`) && PathPrefix(`/lpnode-graphql/`)"
+      kind: Rule
+      services:
+        - name: {{ include "otmoic-lpnode-graphql.fullname" . }}-server
+          port: 18086
