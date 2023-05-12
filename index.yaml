@@ -166,6 +166,16 @@ entries:
     version: 0.1.17
   lp_main:
   - apiVersion: v2
+    appVersion: 0.1.122
+    created: "2023-05-12T04:56:06.980316165Z"
+    description: A Helm chart for Kubernetes
+    digest: 89ca44200e6aac1b62ba6121e124dc77430565b43b10f235b63696f2e8ea02af
+    name: lp_main
+    type: application
+    urls:
+    - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/lp_main-0.1.122/lp_main-0.1.122.tgz
+    version: 0.1.122
+  - apiVersion: v2
     appVersion: 0.1.121
     created: "2023-05-11T05:43:26.075069935Z"
     description: A Helm chart for Kubernetes
@@ -5339,4 +5349,4 @@ entries:
     urls:
     - https://github.com/LittleLollipop/awesome-helm-charts/releases/download/simple-0.1.0/simple-0.1.0.tgz
     version: 0.1.0
-generated: "2023-05-11T05:49:28.361018364Z"
+generated: "2023-05-12T04:56:06.981509599Z"
