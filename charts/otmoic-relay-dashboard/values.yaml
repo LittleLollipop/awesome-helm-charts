@@ -3,4 +3,4 @@ domain:
 nameOverride: ''
 fullnameOverride: ''
 image:
-  name: kldtks/edge:otmoic-relay-dashboard-133afa5d
+  name: kldtks/edge:otmoic-relay-dashboard-14a5f28b
